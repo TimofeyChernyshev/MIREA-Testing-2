@@ -1,0 +1,5 @@
+[tool.mutmut]
+source_paths = ["text_analyzer/text_analyzer.py", "number_utils/number_utils.py"]
+pytest_add_cli_args_test_selection = ["text_analyzer/test_text_analyzer.py", "number_utils/test_number_utils.py"]
+also_copy = ["text_analyzer/", "number_utils/"]
+runner = "python -m pytest -x --tb=no -q"

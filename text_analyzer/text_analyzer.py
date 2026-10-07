@@ -36,7 +36,7 @@ def is_palindrome(text: str) -> bool:
     """Палиндром без учёта регистра, пробелов и знаков."""
     cleaned = re.sub(r"[^а-яa-z0-9]", "", text.lower())
     # баг: [::1] не разворачивает строку, нужно [::-1]
-    return cleaned == cleaned[::1]
+    return cleaned == cleaned[::-1]
 
 
 def unique_words(text: str) -> set[str]:
