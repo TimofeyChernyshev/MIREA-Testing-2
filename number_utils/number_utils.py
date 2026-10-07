@@ -32,8 +32,7 @@ def factorial(n: int) -> int:
     if n < 0:
         raise ValueError("n must be non-negative")
     result = 1
-    # баг: range(1, n) вместо range(1, n + 1) — не хватает последнего множителя
-    for i in range(1, n):
+    for i in range(1, n + 1):
         result *= i
     return result
 
